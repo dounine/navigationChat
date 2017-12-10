@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image,Text,View,Button,StyleSheet} from 'react-native';
 import {TabNavigator,NavigationActions} from 'react-navigation';
+import Stacks from './Stacks';
 
 export default class MyHomeScreen extends React.Component {
     static navigationOptions = {
@@ -32,8 +33,9 @@ export default class MyHomeScreen extends React.Component {
             >
                 <Button
                     onPress={this.buttonClick}
-                    title="toggerTabBar"
+                    title="hideTabBar"
                 />
+                <Stacks screenProps={{parentNavigation:this.props.navigation}} />
             </View>
 
         );
