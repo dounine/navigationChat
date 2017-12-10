@@ -1,23 +1,17 @@
 import {TabNavigator} from "react-navigation";
-import MyHomeScreen from './MyHomeScreen';
-import MyNotificationsScreen from './MyNotificationsScreen';
+import ChatScreen from './ChatScreen';
+import MineScreen from './MineScreen';
 
 export default TabNavigator({
-    Home: {
-        screen: MyHomeScreen,
-        navigationOptions: ({navigation, screenProps}) => {
-            return {
-                tabBarVisible: navigation.state.params ? !navigation.state.params.hideTabBar : true,
-            }
-        }
+    Chat: {
+        screen: ChatScreen,
     },
-    Notifications: {
-        screen: MyNotificationsScreen,
+    Mine: {
+        screen: MineScreen,
     },
 }, {
     tabBarPosition: 'bottom',
-    animationEnabled: true,
     tabBarOptions: {
-        activeTintColor: '#e91e63',
+        activeTintColor: '#7558e9',
     },
 });
